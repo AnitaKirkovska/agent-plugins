@@ -1,11 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
-  <rect width="120" height="120" rx="26" fill="#0D1117"/>
-  <rect x="6" y="6" width="108" height="108" rx="22" fill="none" stroke="#30363D" stroke-width="1.5"/>
-  <!-- puzzle piece -->
-  <path d="M44 40c0-4.4 3.6-8 8-8h4c0 4.4 3.6 8 8 8s8-3.6 8-8h4c4.4 0 8 3.6 8 8v4c4.4 0 8 3.6 8 8s-3.6 8-8 8v4c0 4.4-3.6 8-8 8h-4c0-4.4-3.6-8-8-8s-8 3.6-8 8h-4c-4.4 0-8-3.6-8-8v-4c-4.4 0-8-3.6-8-8s3.6-8 8-8v-4z" fill="#58A6FF"/>
-  <path d="M44 40c0-4.4 3.6-8 8-8h4c0 4.4 3.6 8 8 8s8-3.6 8-8h4c4.4 0 8 3.6 8 8v4c4.4 0 8 3.6 8 8s-3.6 8-8 8v4c0 4.4-3.6 8-8 8h-4c0-4.4-3.6-8-8-8s-8 3.6-8 8h-4c-4.4 0-8-3.6-8-8v-4c-4.4 0-8-3.6-8-8s3.6-8 8-8v-4z" fill="none" stroke="#1F6FEB" stroke-width="1.5"/>
-  <!-- node dots -->
-  <circle cx="32" cy="84" r="5" fill="#F778BA"/>
-  <circle cx="88" cy="84" r="5" fill="#3FB950"/>
-  <path d="M32 84h56" stroke="#30363D" stroke-width="2.5" stroke-dasharray="4 4"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B1036"/>
+      <stop offset="1" stop-color="#0A0717"/>
+    </linearGradient>
+    <linearGradient id="plug" x1="40" y1="40" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C5CFF"/>
+      <stop offset="1" stop-color="#C13BFF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80" cy="80" r="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF6FD8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FF6FD8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="160" height="160" rx="36" fill="url(#bg)"/>
+
+  <!-- spark glow behind the seam -->
+  <circle cx="80" cy="80" r="40" fill="url(#glow)"/>
+
+  <!-- left half: the agent core (socket) -->
+  <path d="M30 56c0-7.7 6.3-14 14-14h28v76H44c-7.7 0-14-6.3-14-14V56z" fill="#2A1C52"/>
+  <path d="M30 56c0-7.7 6.3-14 14-14h28v76H44c-7.7 0-14-6.3-14-14V56z" stroke="#5B47A8" stroke-width="2"/>
+  <!-- socket holes -->
+  <rect x="46" y="62" width="8" height="14" rx="3" fill="#0A0717"/>
+  <rect x="46" y="84" width="8" height="14" rx="3" fill="#0A0717"/>
+
+  <!-- right half: the plug-in module -->
+  <path d="M88 42h28c7.7 0 14 6.3 14 14v48c0 7.7-6.3 14-14 14H88V42z" fill="url(#plug)"/>
+  <!-- plug prongs reaching toward the core -->
+  <rect x="72" y="64" width="18" height="9" rx="4" fill="#FFD7F2"/>
+  <rect x="72" y="87" width="18" height="9" rx="4" fill="#FFD7F2"/>
+
+  <!-- connection spark down the seam -->
+  <path d="M80 36l-6 30h9l-7 28 18-34h-10l8-24z" fill="#FFE45E"/>
 </svg>
